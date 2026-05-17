@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<ion-content class="ion-padding">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngFor="let sucursal of sucursales">
+
+        <ion-card [routerLink]="['/productos', sucursal.id]">
+
+          <ion-card-header>
+            <ion-card-title>
+              {{ sucursal.nombre }}
+            </ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <p>{{ sucursal.direccion }}</p>
+            <p>{{ sucursal.comuna }}</p>
+          </ion-card-content>
+
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<app-footer></app-footer>

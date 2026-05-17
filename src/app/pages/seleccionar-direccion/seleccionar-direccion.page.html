@@ -1,0 +1,59 @@
+<ion-content class="pantalla-direccion">
+
+  <div class="card-direccion">
+
+    <h1>¡Bienvenidos a FoodPlease!</h1>
+
+    <p>
+      Ingresa tu dirección de despacho para poder ofrecerte todo lo que tenemos para ti.
+    </p>
+
+    <ion-item>
+      <ion-input
+        label="Dirección"
+        labelPlacement="stacked"
+        placeholder="Ingresa tu dirección"
+        [(ngModel)]="direccion"
+        (ionInput)="buscarDireccion()"
+      ></ion-input>
+    </ion-item>
+
+    <div class="sugerencias" *ngIf="sugerencias.length > 0">
+      <div
+        class="item-sugerencia"
+        *ngFor="let lugar of sugerencias"
+        (click)="seleccionarDireccion(lugar)"
+      >
+        {{ lugar.display_name }}
+      </div>
+    </div>
+
+    <ion-item>
+      <ion-input
+        label="Comuna"
+        labelPlacement="stacked"
+        [(ngModel)]="comuna"
+        readonly
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        label="Región"
+        labelPlacement="stacked"
+        [(ngModel)]="region"
+        readonly
+      ></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="danger" (click)="confirmarDireccion()">
+      Confirmar dirección
+    </ion-button>
+
+    <ion-button expand="block" color="medium" (click)="soloVitrinear()">
+      Solo vitrinear
+    </ion-button>
+
+  </div>
+
+</ion-content>

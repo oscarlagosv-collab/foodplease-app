@@ -1,0 +1,158 @@
+<app-header></app-header>
+
+<ion-content class="login-bg">
+
+  <div class="login-wrapper">
+
+    <ion-card class="glass-card">
+
+      <ion-card-header>
+        <ion-card-title>
+          Ingresar a mi cuenta
+        </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+
+        <ion-item>
+          <ion-input
+            label="Usuario"
+            labelPlacement="stacked"
+            [(ngModel)]="username"
+            required
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input
+            label="Contraseña"
+            labelPlacement="stacked"
+            [type]="mostrarClave ? 'text' : 'password'"
+            [(ngModel)]="password"
+            required
+          ></ion-input>
+
+          <ion-button
+            fill="clear"
+            slot="end"
+            (click)="cambiarVisibilidadPassword()"
+          >
+            {{ mostrarClave ? '🙈' : '👁️' }}
+          </ion-button>
+        </ion-item>
+
+        <ion-button
+          expand="block"
+          color="danger"
+          class="ion-margin-top"
+          (click)="iniciarSesion()"
+        >
+          Ingresar
+        </ion-button>
+
+        <ion-button
+          expand="block"
+          color="medium"
+          (click)="abrirRecuperarPassword()"
+        >
+          Recuperar contraseña
+        </ion-button>
+
+        <ion-button
+          expand="block"
+          color="danger"
+          routerLink="/registro"
+        >
+          Crear usuario
+        </ion-button>
+
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card class="glass-card soporte-card">
+
+      <ion-card-header>
+        <ion-card-title>
+          Soporte
+        </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+
+        <p>Si necesitas ayuda para ingresar contáctanos a:</p>
+
+        <p><strong>soporte@foodplease.com</strong></p>
+        <p><strong>232754010</strong></p>
+
+        <br>
+
+        <p><strong>Horario de atención</strong></p>
+        <p>Lunes a viernes</p>
+        <p>09:30 - 17:00 hrs</p>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+
+  <ion-modal [isOpen]="modalRecuperarAbierto">
+
+    <ng-template>
+
+      <ion-header>
+        <ion-toolbar color="danger">
+          <ion-title>Recuperar contraseña</ion-title>
+
+          <ion-buttons slot="end">
+            <ion-button (click)="cerrarRecuperarPassword()">
+              Cerrar
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="ion-padding">
+
+        <p>
+          Ingrese su correo electrónico y pulse enviar, y se le enviará una
+          contraseña temporal para que pueda acceder, la cual posteriormente
+          podrá modificar.
+        </p>
+
+        <ion-item>
+          <ion-input
+            type="email"
+            label="Correo electrónico"
+            labelPlacement="stacked"
+            [(ngModel)]="correoRecuperacion"
+          ></ion-input>
+        </ion-item>
+
+        <ion-button
+          expand="block"
+          color="danger"
+          class="ion-margin-top"
+          (click)="enviarRecuperacion()"
+        >
+          Enviar
+        </ion-button>
+
+        <ion-button
+          expand="block"
+          color="medium"
+          (click)="cerrarRecuperarPassword()"
+        >
+          Cancelar
+        </ion-button>
+
+      </ion-content>
+
+    </ng-template>
+
+  </ion-modal>
+
+</ion-content>
+
+<app-footer></app-footer>

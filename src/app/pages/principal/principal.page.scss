@@ -1,0 +1,21 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home-card {
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.icono {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #d60000;
+    margin-bottom: 10px;
+}

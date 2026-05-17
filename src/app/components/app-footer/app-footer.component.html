@@ -1,0 +1,43 @@
+<ion-footer>
+
+  <ion-toolbar class="footer-toolbar">
+
+    <div class="footer-container">
+
+      <a routerLink="/login" class="footer-item">
+        <div>👤</div>
+        <span>Entrar</span>
+      </a>
+
+      <a routerLink="/categorias" class="footer-item">
+        <div>🍔</div>
+        <span>Categorías</span>
+      </a>
+
+      <a routerLink="/carrito" class="footer-item">
+        <div class="icono-carrito">
+
+          🛒
+
+          <span
+            *ngIf="cantidadCarrito > 0"
+            class="contador-carrito"
+          >
+            {{ cantidadCarrito }}
+          </span>
+
+        </div>
+
+        <span>Carrito</span>
+      </a>
+
+      <a routerLink="/nosotros" class="footer-item">
+        <div>👋</div>
+        <span>Nosotros</span>
+      </a>
+
+    </div>
+
+  </ion-toolbar>
+
+</ion-footer>

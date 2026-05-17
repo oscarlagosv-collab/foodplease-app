@@ -1,0 +1,42 @@
+<app-header></app-header>
+
+<ion-content class="ion-padding">
+
+  <div *ngIf="carrito.length === 0">
+    <p>Tu carrito está vacío.</p>
+  </div>
+
+  <ion-card *ngFor="let item of carrito">
+    <ion-card-header>
+      <ion-card-title>{{ item.nombre }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>{{ item.descripcion }}</p>
+      <p>Precio: ${{ item.precio }}</p>
+      <p>Cantidad: {{ item.cantidad }}</p>
+      <p>Subtotal: ${{ item.precio * item.cantidad }}</p>
+
+      <ion-button size="small" color="danger" (click)="disminuir(item)">-</ion-button>
+      <ion-button size="small" color="danger" (click)="aumentar(item)">+</ion-button>
+      <ion-button size="small" color="medium" (click)="eliminar(item)">Eliminar</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="carrito.length > 0">
+    <ion-card-content>
+      <h2>Total: ${{ total }}</h2>
+
+      <ion-button expand="block" color="danger">
+        Finalizar compra
+      </ion-button>
+
+      <ion-button expand="block" color="medium" (click)="vaciarCarrito()">
+        Vaciar carrito
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<app-footer></app-footer>

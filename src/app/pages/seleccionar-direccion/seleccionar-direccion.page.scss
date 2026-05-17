@@ -1,0 +1,49 @@
+.pantalla-direccion {
+    --background: linear-gradient(135deg, #d60000, #ff2525);
+}
+
+.card-direccion {
+    width: 90%;
+    max-width: 480px;
+    margin: 70px auto;
+    padding: 28px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28);
+    text-align: center;
+}
+
+.card-direccion h1 {
+    color: #d60000;
+}
+
+.card-direccion p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+ion-item {
+    margin-bottom: 12px;
+    border-radius: 12px;
+}
+
+.sugerencias {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.18);
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.item-sugerencia {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.item-sugerencia:hover {
+    background: #f5f5f5;
+}
