@@ -22,7 +22,7 @@ export class LocalesPage implements OnInit {
   ngOnInit() {
     const categoriaId = this.route.snapshot.paramMap.get('id');
 
-    fetch(`http://127.0.0.1:8000/api/locales/?categoria=${categoriaId}`)
+    fetch(`https://foodplease-production.up.railway.app/api/locales/?categoria=${categoriaId}`)
       .then(response => response.json())
       .then(data => {
         console.log('Locales recibidos:', data);

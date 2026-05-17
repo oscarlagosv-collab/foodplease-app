@@ -23,7 +23,7 @@ ngOnInit() {
   
   const sucursalId = this.route.snapshot.paramMap.get('id');
   
-  fetch(`http://127.0.0.1:8000/api/productos/?sucursal=${sucursalId}`)
+  fetch(`https://foodplease-production.up.railway.app/api/productos/?sucursal=${sucursalId}`)
     .then(response => response.json())
     .then(data => {
       console.log('Productos:', data);

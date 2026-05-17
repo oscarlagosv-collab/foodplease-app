@@ -21,7 +21,7 @@ export class SucursalesPage implements OnInit {
   ngOnInit() {
     const localId = this.route.snapshot.paramMap.get('id');
 
-    fetch(`http://127.0.0.1:8000/api/sucursales/?local=${localId}`)
+    fetch(`https://foodplease-production.up.railway.app/api/sucursales/?local=${localId}`)
       .then(response => response.json())
       .then(data => {
         console.log('Sucursales:', data);

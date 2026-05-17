@@ -17,7 +17,7 @@ export class CategoriasPage implements OnInit {
   categorias: any[] = [];
   
   ngOnInit() {
-    fetch('http://127.0.0.1:8000/api/categorias/')
+    fetch('https://foodplease-production.up.railway.app/api/categorias/')
       .then(response => response.json())
       .then(data => {
       console.log('Categorías recibidas:', data);
