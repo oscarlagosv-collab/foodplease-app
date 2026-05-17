@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
-import { RouterLink } from '@angular/router';
 import { AppHeaderComponent } from '../../components/app-header/app-header.component';
 import { AppFooterComponent } from '../../components/app-footer/app-footer.component';
 
@@ -11,7 +10,7 @@ import { AppFooterComponent } from '../../components/app-footer/app-footer.compo
   templateUrl: './productos.page.html',
   styleUrls: ['./productos.page.scss'],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterLink, AppHeaderComponent, AppFooterComponent]
+  imports: [CommonModule, IonicModule, AppHeaderComponent, AppFooterComponent]
 })
 export class ProductosPage implements OnInit {
 

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { RouterLink } from '@angular/router';
 import { AppHeaderComponent } from '../../components/app-header/app-header.component';
 import { AppFooterComponent } from '../../components/app-footer/app-footer.component';
 
@@ -10,7 +9,7 @@ import { AppFooterComponent } from '../../components/app-footer/app-footer.compo
   templateUrl: './carrito.page.html',
   styleUrls: ['./carrito.page.scss'],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterLink, AppHeaderComponent, AppFooterComponent]
+  imports: [CommonModule, IonicModule, AppHeaderComponent, AppFooterComponent]
   
 })
 export class CarritoPage implements OnInit {
