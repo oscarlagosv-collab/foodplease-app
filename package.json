@@ -5,8 +5,8 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
   "ng": "ng",
-  "start": "npx serve www",
-  "build": "ng build",
+  "start": "npx serve www -l $PORT",
+  "build": "ng build --configuration development",
   "watch": "ng build --watch --configuration development",
   "test": "ng test",
   "lint": "ng lint"
