@@ -4,13 +4,13 @@
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
-    "ng": "ng",
-    "start": "npx serve www -s -l $PORT",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "lint": "ng lint"
-  },
+  "ng": "ng",
+  "start": "npx serve www",
+  "build": "ionic build",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test",
+  "lint": "ng lint"
+},
   "private": true,
   "dependencies": {
     "@angular/animations": "^20.0.0",
